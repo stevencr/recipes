@@ -113,7 +113,7 @@ a { color: inherit; }
   justify-content:space-between;
   margin:0 .45rem .8rem;
   color:var(--muted);
-  font:700 .66rem "DM Sans", sans-serif;
+  font:700 .66rem "Manrope", sans-serif;
   letter-spacing:.13em;
   text-transform:uppercase;
 }
@@ -164,7 +164,7 @@ a { color: inherit; }
   align-items:center;
   gap:9px;
   color:var(--accent);
-  font:700 .67rem "DM Sans", sans-serif;
+  font:700 .67rem "Manrope", sans-serif;
   letter-spacing:.15em;
   text-transform:uppercase;
 }
@@ -172,7 +172,7 @@ a { color: inherit; }
 .day-summary__date { margin:17px 0 9px; color:var(--muted); font-size:.78rem; font-weight:500; }
 .day-summary h1 {
   margin:0;
-  font:700 clamp(2.8rem,7vw,5.8rem)/.96 "Playfair Display", Georgia, serif;
+  font:700 clamp(2.8rem,7vw,5.8rem)/.96 "Manrope", Georgia, serif;
   letter-spacing:-.055em;
   text-wrap:balance;
 }
@@ -201,7 +201,7 @@ a { color: inherit; }
 }
 .recipe-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-hover); border-color:rgba(83,107,72,.17); }
 .recipe-card__header { display:flex; justify-content:space-between; gap:1rem; align-items:center; }
-.recipe-card__meal { color:var(--accent); font:700 .68rem "DM Sans", sans-serif; letter-spacing:.15em; text-transform:uppercase; }
+.recipe-card__meal { color:var(--accent); font:700 .68rem "Manrope", sans-serif; letter-spacing:.15em; text-transform:uppercase; }
 .recipe-card__time {
   padding:.34rem .62rem;
   border:1px solid rgba(83,107,72,.12);
@@ -211,7 +211,7 @@ a { color: inherit; }
   font-size:.68rem;
   font-weight:600;
 }
-.recipe-card h2 { margin:13px 0 7px; font:700 clamp(1.55rem,3vw,2.2rem)/1.12 "Playfair Display", Georgia, serif; letter-spacing:-.025em; }
+.recipe-card h2 { margin:13px 0 7px; font:700 clamp(1.55rem,3vw,2.2rem)/1.12 "Manrope", Georgia, serif; letter-spacing:-.025em; }
 .recipe-card__description { max-width:710px; margin:0; color:var(--muted); }
 .recipe-card__meta { display:flex; flex-wrap:wrap; gap:7px; margin:18px 0 27px; }
 .recipe-card__meta span {
@@ -229,7 +229,7 @@ a { color: inherit; }
   padding-top:25px;
   border-top:1px solid var(--border);
 }
-.recipe-card h3 { margin:0 0 11px; font:700 .69rem "DM Sans", sans-serif; letter-spacing:.11em; text-transform:uppercase; }
+.recipe-card h3 { margin:0 0 11px; font:700 .69rem "Manrope", sans-serif; letter-spacing:.11em; text-transform:uppercase; }
 .recipe-card ul, .recipe-card ol { margin:0; padding-left:1.15rem; color:var(--muted); }
 .recipe-card li { margin:.46rem 0; padding-left:.12rem; }
 .recipe-card li::marker { color:var(--accent); font-weight:700; }
@@ -304,7 +304,7 @@ a { color: inherit; }
 }
 .shopping-modal__header { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; padding:24px 24px 18px; border-bottom:1px solid var(--border); }
 .shopping-modal__eyebrow { color:var(--accent); font-size:.66rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
-.shopping-modal__header h2 { margin:6px 0 0; font:700 clamp(1.55rem,4vw,2rem)/1.1 "Playfair Display", Georgia, serif; letter-spacing:-.025em; }
+.shopping-modal__header h2 { margin:6px 0 0; font:700 clamp(1.55rem,4vw,2rem)/1.1 "Manrope", Georgia, serif; letter-spacing:-.025em; }
 .shopping-modal__close {
   width:38px; height:38px; flex:none; display:grid; place-items:center; border:1px solid var(--border);
   border-radius:12px; background:var(--surface-soft); color:var(--text); font-size:1.4rem; line-height:1; cursor:pointer;
