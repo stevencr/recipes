@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  --bg: #fbf8f1;
+  --surface: #fffdf9;
+  --surface-hover: #f3eee4;
+  --border: rgba(43, 48, 38, .12);
+  --text: #252a22;
+  --muted: #72776d;
+  --accent: #5f6f45;
+  --accent-bright: #84985f;
+  --accent-soft: rgba(95,111,69,.12);
+  --warm: #c9824d;
+}
+:root[data-theme="dark"] {
+  --bg: #11130f;
+  --surface: #191c16;
+  --surface-hover: #22271e;
+  --border: rgba(255,255,255,.1);
+  --text: #f2f0e8;
+  --muted: #a5aa9e;
+  --accent: #a9bc7c;
+  --accent-bright: #c2d58e;
+  --accent-soft: rgba(169,188,124,.13);
+  --warm: #e0a06e;
+}
+html, body, #root { margin: 0; min-height: 100%; background: var(--bg); }
+body { min-height: 100vh; color: var(--text); font: 16px/1.55 "DM Sans", system-ui, sans-serif; }
+button, a { font: inherit; }
+.site-header {
+  height: 70px; display: flex; align-items: center; gap: .75rem; padding: .7rem 1rem;
+  border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 50;
+}
+.brand { display:flex; align-items:center; gap:.7rem; flex:1; color:inherit; text-decoration:none; }
+.brand__mark { width:40px; height:40px; display:grid; place-items:center; border-radius:13px; background:var(--accent-soft); color:var(--accent); font-size:1.25rem; }
+.brand__name { display:block; font:700 1rem "Playfair Display", Georgia, serif; }
+.brand__tagline { display:block; color:var(--muted); font-size:.68rem; }
+.header-actions { display:flex; gap:.7rem; }
+.theme-toggle, .menu-toggle {
+  width:42px; height:42px; display:grid; place-items:center; border:1px solid var(--border);
+  border-radius:12px; background:var(--surface); color:var(--text); cursor:pointer;
+}
+.menu-toggle { place-content:center; gap:5px; }
+.menu-toggle span { width:17px; height:2px; background:currentColor; }
+.app-shell { display:grid; grid-template-columns:280px minmax(0,1fr); min-height:calc(100vh - 70px); }
+.sidebar { padding:1.4rem 1.1rem; border-right:1px solid var(--border); background:var(--surface); }
+.sidebar__heading { display:flex; justify-content:space-between; margin-bottom:.8rem; color:var(--muted); font:700 .68rem "DM Sans"; letter-spacing:.12em; text-transform:uppercase; }
+.sidebar__heading span:last-child, .sidebar__number { color:var(--accent); }
+.sidebar__list { list-style:none; display:grid; gap:.55rem; margin:0; padding:0; }
+.sidebar__link { min-height:64px; display:flex; align-items:center; gap:.75rem; padding:.7rem .8rem; border:1px solid var(--border); border-radius:14px; color:var(--text); text-decoration:none; }
+.sidebar__link:hover, .sidebar__link.active { background:var(--surface-hover); border-color:var(--accent); }
+.sidebar__copy { min-width:0; }
+.sidebar__copy strong, .sidebar__copy small { display:block; }
+.sidebar__copy strong { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:.8rem; }
+.sidebar__copy small { margin-top:.15rem; color:var(--muted); font-size:.7rem; }
+.content { min-width:0; }
+.day-page { max-width:1100px; margin:auto; padding:clamp(32px,6vw,72px) clamp(18px,5vw,64px) 90px; }
+.day-summary { max-width:760px; margin-bottom:36px; }
+.day-summary__eyebrow { display:flex; align-items:center; gap:9px; color:var(--accent); font:700 .7rem "DM Sans"; letter-spacing:.14em; text-transform:uppercase; }
+.day-summary__eyebrow span { width:7px; height:7px; border-radius:50%; background:var(--warm); }
+.day-summary__date { margin:18px 0 8px; color:var(--muted); font-size:.8rem; }
+.day-summary h1 { margin:0; font:700 clamp(2.6rem,7vw,5.7rem)/.98 "Playfair Display", Georgia, serif; letter-spacing:-.045em; }
+.day-summary__note { max-width:620px; margin:20px 0 0; color:var(--muted); font-size:clamp(1rem,2vw,1.15rem); }
+.meal-list { display:grid; gap:18px; }
+.recipe-card { padding:clamp(20px,4vw,32px); border:1px solid var(--border); border-radius:22px; background:var(--surface); }
+.recipe-card__header { display:flex; justify-content:space-between; gap:1rem; align-items:center; }
+.recipe-card__meal { color:var(--accent); font:700 .7rem "DM Sans"; letter-spacing:.14em; text-transform:uppercase; }
+.recipe-card__time { padding:.3rem .55rem; border-radius:999px; background:var(--accent-soft); color:var(--accent); font-size:.7rem; }
+.recipe-card h2 { margin:13px 0 7px; font:700 clamp(1.5rem,3vw,2.15rem)/1.15 "Playfair Display", Georgia, serif; }
+.recipe-card__description { max-width:700px; margin:0; color:var(--muted); }
+.recipe-card__meta { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 26px; }
+.recipe-card__meta span { padding:.38rem .65rem; border:1px solid var(--border); border-radius:999px; color:var(--muted); font-size:.7rem; }
+.recipe-card__details { display:grid; grid-template-columns:minmax(200px,.8fr) minmax(300px,1.2fr); gap:28px; padding-top:24px; border-top:1px solid var(--border); }
+.recipe-card h3 { margin:0 0 10px; font:700 .76rem "DM Sans"; letter-spacing:.1em; text-transform:uppercase; }
+.recipe-card ul, .recipe-card ol { margin:0; padding-left:1.15rem; color:var(--muted); }
+.recipe-card li { margin:.45rem 0; }
+.site-footer { border-top:1px solid var(--border); padding:18px; text-align:center; color:var(--muted); font-size:.72rem; }
+.nav-backdrop { display:none; }
+@media (max-width: 699px) {
+  .app-shell { display:block; }
+  .sidebar { position:fixed; top:70px; bottom:0; left:0; width:min(310px,88vw); z-index:40; transform:translateX(-105%); transition:transform .24s ease; overflow:auto; }
+  .sidebar.is-open { transform:translateX(0); }
+  .nav-backdrop { display:block; position:fixed; inset:70px 0 0; z-index:30; border:0; background:rgba(0,0,0,.45); }
+  .recipe-card__details { grid-template-columns:1fr; gap:24px; }
+  .day-page { padding-top:34px; }
+}
+@media (min-width: 700px) { .menu-toggle { display:none; } }
