@@ -12,10 +12,16 @@ export type Recipe = {
   method: string[];
 };
 
+export type ShoppingItem = {
+  id: string;
+  name: string;
+};
+
 export type RecipeDay = {
   id: string;
   dateLabel: string;
   title: string;
   note: string;
   recipes: Recipe[];
+  shoppingList: ShoppingItem[];
 };
