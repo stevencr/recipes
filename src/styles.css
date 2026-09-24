@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -40,7 +40,7 @@ html, body, #root { margin: 0; min-height: 100%; background: var(--bg); }
 body {
   min-height: 100vh;
   color: var(--text);
-  font: 16px/1.55 "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font: 16px/1.55 "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 button, a { font: inherit; }
@@ -81,7 +81,7 @@ a { color: inherit; }
   font-size:1.15rem;
   box-shadow:0 6px 20px rgba(83,107,72,.08);
 }
-.brand__name { display:block; font:700 1.02rem "Playfair Display", Georgia, serif; letter-spacing:-.015em; }
+.brand__name { display:block; font:800 1.02rem "Manrope", system-ui, sans-serif; letter-spacing:-.015em; }
 .brand__tagline { display:block; color:var(--muted); font-size:.66rem; letter-spacing:.02em; }
 
 .header-actions { display:flex; gap:.6rem; }
