@@ -356,7 +356,7 @@ export const recipes: RecipeDay[] = [
         method: ['Cook the basmati rice according to the packet instructions.', 'Heat the olive oil in a large frying pan. Add the chicken and cook for 5–6 minutes until lightly browned.', 'Add the carrot, pepper, ginger, cumin, turmeric and curry powder. Cook for 3 minutes, stirring regularly.', 'Pour in the coconut milk and simmer gently for 10–12 minutes, until the chicken is cooked through and the sauce has thickened.', 'Stir in the spinach until wilted. Season with black pepper, scatter over the coriander and serve with the rice.'],
       },
     ],
-  },,
+  },
 
   {
     id: '2026-10-08',
