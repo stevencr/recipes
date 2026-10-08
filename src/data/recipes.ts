@@ -292,7 +292,6 @@ export const recipes: RecipeDay[] = [
       },
     ],
   },
-,
 
   {
     id: '2026-10-05',
