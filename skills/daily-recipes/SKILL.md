@@ -101,27 +101,43 @@ Do not reintroduce Playfair Display, Georgia as a primary display font, or other
 
 If styling changes are explicitly requested, use `src/styles.css` and preserve the established design system rather than adding one-off inline styles.
 
-## Validation
+## Validation — mandatory
 
-Before finishing a recipe-content change:
+A recipe change is **not complete and must not be committed as finished until the project builds successfully**.
+
+Before committing any recipe-content change:
 
 1. Confirm every day has exactly Breakfast, Lunch and Dinner.
 2. Confirm every day has a shopping list.
 3. Confirm the shopping list covers all recipe ingredients.
 4. Check for duplicate day, recipe and shopping-item IDs.
-5. Run `npm run build`.
-6. Do not change GitHub Actions unless explicitly requested.
+5. Run the project's real production build with `npm run build`.
+6. Treat **any** TypeScript error, syntax error, lint/build error, module-resolution error or other non-zero build result as a failure.
+7. If the build fails, fix the problem before committing or reporting the task as complete.
+8. After fixing a build failure, run `npm run build` again. Do not rely on the previous failed run.
+9. Do not change GitHub Actions merely to work around a local build failure unless explicitly requested.
+10. Only report the recipe change as complete after a successful build has been observed.
+
+### Deployment safety
+
+The GitHub Pages deployment runs the same production build. Therefore:
+
+- Never knowingly commit code that fails `npm run build`.
+- A successful content edit is not enough; the production build must pass.
+- When GitHub Actions is available through the GitHub integration, check the resulting workflow run after pushing to `main`.
+- If the deployment workflow fails, inspect the failed job/logs, fix the underlying repository problem, and verify a subsequent run succeeds before saying the deployment is fixed.
+- Do not claim “deployed successfully” based only on a successful commit or a queued workflow.
 
 ## Git workflow
 
 For normal recipe content:
 
 - change `src/data/recipes.ts`
+- run `npm run build` before committing
 - use a clear commit such as `Add recipes for 25 September 2026`
 - avoid unrelated changes
-
-The existing Pages workflow deploys on pushes to `main`.
+- after pushing to `main`, verify the Pages workflow when the GitHub integration permits it
 
 ## Expected result
 
-A new day should automatically appear in navigation, have its own route, render the three existing RecipeCards, expose the Shopping List modal, support both themes, work on mobile and desktop, and deploy through the existing workflow.
+A new day should automatically appear in navigation, have its own route, render the three existing RecipeCards, expose the Shopping List modal, support both themes, work on mobile and desktop, pass `npm run build`, and deploy through the existing workflow.
